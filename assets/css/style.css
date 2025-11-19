@@ -1,34 +1,45 @@
+:root {
+  --main-color-one: #333333;
+  --main-color-two: #ffffff;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
   font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 450px;
+  background-color: var(--main-color-one);
   background-image: url("./../images/pexels-photo-16592498.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .hero {
-  text-align: center;
-  color: white;
-  padding: 1.5em;
-  max-width: 880px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 880px; /* Можна було б зробити у viewport-одиницях чи відсотках, але в оригіналі зазначено саме так (хоча там і медіа-запити є) */
   gap: 1em;
+  padding: 1.5em; /* В оригіналі побачив, що майже усі відступи на сторінці кратні 16px, тому й вказав у em/rem */
+  color: var(--main-color-two);
 }
 
 h1 {
@@ -37,88 +48,142 @@ h1 {
 }
 
 .read-more {
-  width: fit-content;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #666666;
-  padding: 1em 2em;
-  background-color: #333333;
   margin: 0.6em 0;
+  padding: 1em 2em;
+  background-color: var(--main-color-one);
+  border: 1px solid #666666;
 }
 
 .read-more:hover {
-  background-color: white;
   color: #333333;
+  background-color: var(--main-color-two);
 }
 
 .first-section {
-  min-height: 224px;
-  background-color: #eaeaea;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  color: #333333;
+  min-height: 224px; /* Можна було б зробити у viewport-одиницях чи відсотках, але в оригіналі зазначено саме так */
   gap: 1.3em;
   padding: 1.5em 1.5em 2em;
+  color: var(--main-color-one);
+  background-color: #eaeaea;
 }
 
 h2 {
   font-size: 1.65rem;
   font-weight: bold;
-  text-align: center;
 }
 
 .first-section > div {
   display: flex;
-  max-width: 827px;
+  max-width: 827px; /* Можна було б зробити у viewport-одиницях чи відсотках */
   gap: 1.5em;
 }
 
 .first-section > div > p {
-  max-width: 400px;
-  text-align: center;
+  max-width: 400px; /* Можна було б зробити у viewport-одиницях чи відсотках */
 }
 
 .second-section {
-  min-height: 388.73px;
-  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  min-height: 388px; /* Можна було б зробити у viewport-одиницях чи відсотках */
+  padding: 2.2rem 1.1rem;
+  background-color: var(--main-color-one);
+}
+
+.second-section > ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2.2rem 1.1rem 1.1rem;
   gap: 1.2em;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
-  color: #333333;
-  background-color: #ffffff;
-  max-width: 273px;
-  min-height: 318px;
-  text-align: center;
+  max-width: 273px; /* Можна було б зробити у viewport-одиницях чи відсотках */
+  min-height: 318px; /* Можна було б зробити у viewport-одиницях чи відсотках */
   gap: 2em;
+  color: var(--main-color-one);
+  background-color: var(--main-color-two);
+}
+
+.card > img {
+  width: 100%;
+  max-height: 182px; /* Можна було б зробити у viewport-одиницях чи відсотках */
 }
 
 .card-content-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 1.5em 1.5em;
+  padding: 0 1.5em 2.6em;
   gap: 2em;
 }
 
 h3 {
-  font-weight: bold;
   font-size: 1.17em;
+  font-weight: bold;
 }
 
 .third-section {
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 250px; /* Можна було б зробити у viewport-одиницях чи відсотках */
+  gap: 1.3em;
+  padding: 2em;
+  color: #333333;
+  background-color: var(--main-color-two);
 }
 
-img {
-  width: 100%;
-  max-height: 182px;
+.third-section > p {
+  max-width: 880px; /* Можна було б зробити у viewport-одиницях чи відсотках */
+}
+
+.fourth-section {
+  display: flex;
+  min-height: 312px; /* Можна було б зробити у viewport-одиницях чи відсотках */
+}
+
+.blue-box,
+.black-box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 2em;
+  padding: 2.2rem;
+  color: var(--main-color-two);
+}
+
+.blue-box > h2,
+.black-box > h2 {
+  padding: 1.65rem 0 0.3em;
+}
+
+.blue-box {
+  background-color: #2690d4;
+}
+
+.black-box {
+  background-color: var(--main-color-one);
+}
+
+footer {
+  display: flex;
+  min-height: 97px; /* Можна було б зробити у viewport-одиницях чи відсотках */
+  padding: 2.2rem;
+  color: var(--main-color-two);
+  background-color: #000000;
+}
+
+footer > p {
+  width: 50%;
+}
+
+footer a {
+  color: #2690d4;
 }
