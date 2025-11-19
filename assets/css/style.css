@@ -10,7 +10,7 @@ body {
 
 header {
   min-height: 450px;
-  background-image: url("https://images.pexels.com/photos/16592498/pexels-photo-16592498.jpeg");
+  background-image: url("./../images/pexels-photo-16592498.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -56,21 +56,23 @@ h1 {
   background-color: #eaeaea;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   color: #333333;
   gap: 1.3em;
-  padding-bottom: 2em;
+  padding: 1.5em 1.5em 2em;
 }
 
 h2 {
   font-size: 1.65rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .first-section > div {
   display: flex;
-  gap: 1.8em;
+  max-width: 827px;
+  gap: 1.5em;
 }
 
 .first-section > div > p {
@@ -79,6 +81,44 @@ h2 {
 }
 
 .second-section {
-  min-height: 388px;
+  min-height: 388.73px;
   background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.2rem 1.1rem 1.1rem;
+  gap: 1.2em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  color: #333333;
+  background-color: #ffffff;
+  max-width: 273px;
+  min-height: 318px;
+  text-align: center;
+  gap: 2em;
+}
+
+.card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5em 1.5em;
+  gap: 2em;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.17em;
+}
+
+.third-section {
+  background-color: #ffffff;
+}
+
+img {
+  width: 100%;
+  max-height: 182px;
 }
