@@ -1,6 +1,10 @@
 :root {
-  --main-color-one: #333333;
-  --main-color-two: #ffffff;
+  --main-color-dark: #333333;
+  --main-color-light: #ffffff;
+  --sub-color-dark: #2690d4;
+  --sub-color-light: #eaeaea;
+  --border-color: #666666;
+  --footer-color: #000000;
 }
 
 * {
@@ -24,7 +28,7 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 450px;
-  background-color: var(--main-color-one);
+  background-color: var(--main-color-dark);
   background-image: url("./../images/pexels-photo-16592498.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,7 +43,7 @@ header {
   max-width: 880px; /* Можна було б зробити у viewport-одиницях чи відсотках, але в оригіналі зазначено саме так (хоча там і медіа-запити є) */
   gap: 1em;
   padding: 1.5em; /* В оригіналі побачив, що майже усі відступи на сторінці кратні 16px, тому й вказав у em/rem */
-  color: var(--main-color-two);
+  color: var(--main-color-light);
 }
 
 h1 {
@@ -50,16 +54,16 @@ h1 {
 .read-more {
   margin: 0.6em 0;
   padding: 1em 2em;
-  background-color: var(--main-color-one);
-  border: 1px solid #666666;
+  background-color: var(--main-color-dark);
+  border: 1px solid var(--border-color);
 }
 
 .read-more:hover {
-  color: #333333;
-  background-color: var(--main-color-two);
+  color: var(--main-color-dark);
+  background-color: var(--main-color-light);
 }
 
-.first-section {
+.main-inform-section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -67,8 +71,8 @@ h1 {
   min-height: 224px; /* Можна було б зробити у viewport-одиницях чи відсотках, але в оригіналі зазначено саме так */
   gap: 1.3em;
   padding: 1.5em 1.5em 2em;
-  color: var(--main-color-one);
-  background-color: #eaeaea;
+  color: var(--main-color-dark);
+  background-color: var(--sub-color-light);
 }
 
 h2 {
@@ -76,25 +80,25 @@ h2 {
   font-weight: bold;
 }
 
-.first-section > div {
+.main-inform-section > div {
   display: flex;
   max-width: 827px; /* Можна було б зробити у viewport-одиницях чи відсотках */
   gap: 1.5em;
 }
 
-.first-section > div > p {
+.main-inform-section > div > p {
   max-width: 400px; /* Можна було б зробити у viewport-одиницях чи відсотках */
 }
 
-.second-section {
+.card-section {
   display: flex;
   justify-content: center;
   min-height: 388px; /* Можна було б зробити у viewport-одиницях чи відсотках */
   padding: 2.2rem 1.1rem;
-  background-color: var(--main-color-one);
+  background-color: var(--main-color-dark);
 }
 
-.second-section > ul {
+.card-section > ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,8 +111,8 @@ h2 {
   max-width: 273px; /* Можна було б зробити у viewport-одиницях чи відсотках */
   min-height: 318px; /* Можна було б зробити у viewport-одиницях чи відсотках */
   gap: 2em;
-  color: var(--main-color-one);
-  background-color: var(--main-color-two);
+  color: var(--main-color-dark);
+  background-color: var(--main-color-light);
 }
 
 .card > img {
@@ -128,7 +132,7 @@ h3 {
   font-weight: bold;
 }
 
-.third-section {
+.sub-inform-section {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -136,15 +140,15 @@ h3 {
   min-height: 250px; /* Можна було б зробити у viewport-одиницях чи відсотках */
   gap: 1.3em;
   padding: 2em;
-  color: #333333;
-  background-color: var(--main-color-two);
+  color: var(--main-color-dark);
+  background-color: var(--main-color-light);
 }
 
-.third-section > p {
+.sub-inform-section > p {
   max-width: 880px; /* Можна було б зробити у viewport-одиницях чи відсотках */
 }
 
-.fourth-section {
+.about-section {
   display: flex;
   min-height: 312px; /* Можна було б зробити у viewport-одиницях чи відсотках */
 }
@@ -156,7 +160,7 @@ h3 {
   width: 50%;
   gap: 2em;
   padding: 2.2rem;
-  color: var(--main-color-two);
+  color: var(--main-color-light);
 }
 
 .blue-box > h2,
@@ -165,19 +169,19 @@ h3 {
 }
 
 .blue-box {
-  background-color: #2690d4;
+  background-color: var(--sub-color-dark);
 }
 
 .black-box {
-  background-color: var(--main-color-one);
+  background-color: var(--main-color-dark);
 }
 
 footer {
   display: flex;
   min-height: 97px; /* Можна було б зробити у viewport-одиницях чи відсотках */
   padding: 2.2rem;
-  color: var(--main-color-two);
-  background-color: #000000;
+  color: var(--main-color-light);
+  background-color: var(--footer-color);
 }
 
 footer > p {
@@ -185,5 +189,5 @@ footer > p {
 }
 
 footer a {
-  color: #2690d4;
+  color: var(--sub-color-dark);
 }
