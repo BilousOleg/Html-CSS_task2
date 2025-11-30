@@ -114,11 +114,24 @@ h3 {
   font-size: 1.17em;
 }
 
-.third-section {
-  background-color: #ffffff;
-}
-
 img {
   width: 100%;
   max-height: 182px;
+}
+
+.third-section {
+  min-height: 250px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #333333;
+  gap: 1.3em;
+  padding: 2em;
+  text-align: center;
+}
+
+.third-section > p {
+  max-width: 880px;
 }
